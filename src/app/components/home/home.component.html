@@ -1,0 +1,6 @@
+<div *ngIf="accommodation$ | async as accommodations">
+  <h1>Liste des logements</h1>
+  <div *ngFor="let accommodation of accommodations">
+    <app-card [accommodation]="accommodation"></app-card>
+  </div>
+</div>

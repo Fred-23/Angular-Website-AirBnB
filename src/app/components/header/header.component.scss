@@ -1,0 +1,38 @@
+.filter-red {
+  filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
+    brightness(116%) contrast(104%);
+}
+
+
+.header-line {
+  background-color: aqua;
+  align-items: center;  //à enlever plus tard 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  border-bottom: 2px solid #555; 
+  padding-left: 1%;
+  .searchbar {
+    background-color: red;
+    display: flex;
+    white-space: nowrap;
+    gap: 2rem;
+  }
+  .right-container {
+    background-color: green;
+    display: flex;
+    gap: 1rem;
+    padding-right: 3%;
+    .bubble {
+      
+      display: flex;
+      gap: 1rem;
+      width: 200%; /* Ajustez la largeur selon vos besoins */
+      height: 100%; /* Ajustez la hauteur selon vos besoins */
+      background-color: transparent; /* Couleur de fond transparente */
+      border: 2px solid #555; /* Bordure de 2 pixels en gris foncé */
+      border-radius: 10px; /* Rayon de 10 pixels pour arrondir les coins */
+    }
+  }
+}

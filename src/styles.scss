@@ -1,1 +1,15 @@
+
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    //white-space: nowrap;
+}
+
+//Asterix pour tous les éléments, appliquer un même style partout
+
+h1{
+    font-family: 'Maven Pro';
+    font-size: large;
+    font-weight: 100;
+}

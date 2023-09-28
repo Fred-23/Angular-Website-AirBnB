@@ -1,0 +1,10 @@
+<div>
+    <h2>ID: {{ accommodation.id }}</h2>
+    <img [src]="'data:image/png;base64,' + accommodation.image" alt="Image du logement"/>
+    <p>Ville: {{ accommodation.city.name }}</p>
+    <p>Code postal: {{ accommodation.city.zipCode }}</p>
+    <p>Prix: {{ accommodation.price }}</p>
+    <p>Évaluation: {{ accommodation.rating }}</p>
+    <p>Favori: {{ accommodation.favourite ? 'Oui' : 'Non' }}</p>
+  </div>
+  
