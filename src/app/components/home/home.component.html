@@ -1,6 +1,7 @@
-<div *ngIf="accommodation$ | async as accommodations">
-  <h1>Liste des logements</h1>
-  <div *ngFor="let accommodation of accommodations">
-    <app-card [accommodation]="accommodation"></app-card>
+<div *ngIf="accommodation$ | async as accommodations" class="cardlist-container">
+  <div class="cardlist">
+    <div *ngFor="let accommodation of accommodations" class="card-wrapper">
+      <app-card [accommodation]="accommodation"></app-card>
+    </div>
   </div>
 </div>

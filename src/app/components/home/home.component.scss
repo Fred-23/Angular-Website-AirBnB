@@ -1,3 +1,10 @@
 body {
     overflow-x: hidden; /* Désactive le défilement horizontal */
   }
+
+.cardlist{
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap:4rem;
+}
