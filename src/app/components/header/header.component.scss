@@ -23,16 +23,26 @@
     background-color: green;
     display: flex;
     gap: 1rem;
-    padding-right: 3%;
+    padding-right: 4%;
+    align-items: center;
     .bubble {
       
       display: flex;
+      padding-left: 2%;
+      padding-right: 28%;
       gap: 1rem;
-      width: 200%; /* Ajustez la largeur selon vos besoins */
-      height: 100%; /* Ajustez la hauteur selon vos besoins */
-      background-color: transparent; /* Couleur de fond transparente */
+      //width: 200%;
+      //height: 100%;
+      //background-color: transparent; /* Couleur de fond transparente */
       border: 2px solid #555; /* Bordure de 2 pixels en gris foncé */
       border-radius: 10px; /* Rayon de 10 pixels pour arrondir les coins */
+   
     }
   }
+}
+
+
+.text-right-container {
+
+  white-space: nowrap; /* Cette propriété est nécessaire pour que text-overflow fonctionne */
 }
