@@ -4,13 +4,21 @@
     margin: 0;
     padding: 0;
     //white-space: nowrap;
+    //font-family: 'cereal_airbnb';
 }
 
 //Asterix pour tous les éléments, appliquer un même style partout
+@font-face {
+    font-family: 'cereal_airbnb_light';
+    src: url('airbnb_light.otf') format('opentype');
+  }
+  
+@font-face {
+    font-family: 'cereal_airbnb_bold';
+    font-weight: bold;
+    src: url('airbnb_bold.otf') format('opentype');
+  }
 
-h1{
-    font-family: 'Maven Pro';
-    font-size: large;
-    font-weight: 100;
+p{
+    font-family: 'cereal_airbnb_light';
 }
-

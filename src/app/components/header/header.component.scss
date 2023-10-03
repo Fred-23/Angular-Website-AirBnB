@@ -1,6 +1,7 @@
 .filter-red {
   filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
     brightness(116%) contrast(104%);
+    
 }
 
 
@@ -29,8 +30,7 @@
     padding-right: 5%;
     align-items: center;
     .bubble {
-      
-      display: flex;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;      display: flex;
       padding-left: 2%;
       padding-right: 28%;
       gap: 1rem;
