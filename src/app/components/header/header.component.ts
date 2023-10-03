@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { City } from '../models/City';
 import { Observable } from 'rxjs';
 import { AccommodationService } from 'src/app/service/accommodation.service';
+import { SharedVariableService } from 'src/app/service/shared-variable.service';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,7 @@ export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
   listCity$: Observable<Array<City>>;
 
-  constructor(private accommodationService: AccommodationService) { }
-
+  constructor(private accommodationService: AccommodationService,private searchService: SharedVariableService ) { }
   ngAfterViewInit() {
     // Récupérez l'élément input par son id
     const searchInput = document.getElementById("search-input");
@@ -23,6 +23,7 @@ export class HeaderComponent implements AfterViewInit {
       searchInput.addEventListener("input", (event) => {
         // Mettre à jour this.searchText à chaque changement d'entrée
         this.searchText = (event.target as HTMLInputElement).value;
+        this.searchService.setSearchText(this.searchText);
       });
 
       searchInput.addEventListener("keydown", (event) => {

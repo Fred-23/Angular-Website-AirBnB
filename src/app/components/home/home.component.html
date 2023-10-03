@@ -1,7 +1,10 @@
 <div *ngIf="accommodation$ | async as accommodations" class="cardlist-container">
   <div class="cardlist">
     <div *ngFor="let accommodation of accommodations" class="card-wrapper">
-      <app-card [accommodation]="accommodation"></app-card>
+      <!-- Ajoutez une condition ngIf pour filtrer les cards -->
+      <app-card [accommodation]="accommodation" 
+                *ngIf="matchesSearchText(accommodation.city.name)">
+      </app-card>
     </div>
   </div>
 </div>
