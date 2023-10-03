@@ -1,6 +1,6 @@
 .Img {
-  width: 150px;
-  height: 150px;
+  width: 30vh;
+  height: 25vh;
   border-radius: 10px;
 }
 
@@ -14,11 +14,11 @@
   position: relative;
   display: flex;
   .like {
-    width: 10px;
-    height: 10px;
+    width: 2vh;
+    height: 2vh;
     position: absolute;
-    margin-left: 130px;
-    margin-top: 5px;
+    margin-left: 27vh;
+    margin-top: 1vh;
   }
 }
 
