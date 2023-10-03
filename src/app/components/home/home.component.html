@@ -5,3 +5,13 @@
     </div>
   </div>
 </div>
+
+
+<div *ngIf="!(accommodation$ | async ) as accommodations" class="loader">
+  <p>load</p>
+</div>
+
+
+<div *ngFor="let city of listCity$ | async">
+  <p>{{ city.nom }}</p>
+</div>
