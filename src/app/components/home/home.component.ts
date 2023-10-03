@@ -31,13 +31,21 @@ export class HomeComponent implements OnInit {
   }
 
   // Méthode pour vérifier si l'hébergement correspond au searchText
-  matchesSearchText(accommodationName: string): boolean {
-    
-    if (!this.searchText) {
-      // Si searchText est vide, affichez l'hébergement
-      return true;
-    }
-    // Sinon, comparez le nom de l'hébergement avec le searchText (insensible à la casse)
-    return accommodationName.toLowerCase().startsWith(this.searchText.toLowerCase());
+ // Méthode pour vérifier si le nom de l'hébergement ou le code postal commence par searchText
+ matchesSearchText(accommodationName: string, zipCode: number): boolean {
+  if (!this.searchText) {
+    // Si searchText est vide, affichez l'hébergement
+    return true;
   }
+  
+  const searchTextLowerCase = this.searchText.toLowerCase();
+  const zipCodeString = zipCode.toString();
+
+  // Comparez le nom de l'hébergement et le code postal avec le searchText (insensible à la casse)
+  return (
+    accommodationName.toLowerCase().startsWith(searchTextLowerCase) ||
+    zipCodeString.startsWith(searchTextLowerCase)
+  );
+}
+
 }

@@ -3,7 +3,7 @@
     <div *ngFor="let accommodation of accommodations" class="card-wrapper">
       <!-- Ajoutez une condition ngIf pour filtrer les cards -->
       <app-card [accommodation]="accommodation" 
-                *ngIf="matchesSearchText(accommodation.city.name)">
+                *ngIf="matchesSearchText(accommodation.city.name,accommodation.city.zipCode)">
       </app-card>
     </div>
   </div>
