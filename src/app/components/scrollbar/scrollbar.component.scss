@@ -1,0 +1,14 @@
+.scrollbar{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    display: flex;
+    gap:4rem;
+    .icon_scroll{
+        width: 3vh;
+        height: 3vh;
+    }
+    justify-content: space-between;
+    border: 2px solid gray;
+}

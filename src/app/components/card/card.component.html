@@ -1,8 +1,8 @@
 <div class="card">
-    <h2>ID: {{ accommodation.id }}</h2>
+    <!-- <h2>ID: {{ accommodation.id }}</h2> -->
     <div class="squareimage">
         <img [src]="'data:image/png;base64,' + accommodation.image" alt="Image du logement" class="Img"/>
-        <img src="../../../assets/assets-airbnb/like.svg" alt="Image du logement" class="like"  />
+        <img src="../../../assets/assets-airbnb/like.svg" alt="Image du logement" class="like" [ngClass]="{'favorite-like': accommodation.favourite}" />
     </div>
 
     <div class="firstline">

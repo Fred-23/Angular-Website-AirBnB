@@ -7,6 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
+import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
+import { CookiePopUpComponent } from './components/cookie-pop-up/cookie-pop-up.component';
+import { CommonModule } from '@angular/common'; // Importez CommonModule
+
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { CardComponent } from './components/card/card.component';
     HomeComponent,
     HeaderComponent,
     CardComponent,
+    ScrollbarComponent,
+    CookiePopUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,5 +7,8 @@ import { Logement } from '../models/Logement';
 })
 export class CardComponent {
   @Input() accommodation: Logement; // Propriété d'entrée pour les données du logement
+  toggleFavorite() {
+    this.accommodation.favourite = !this.accommodation.favourite;
+  }
 }
 
