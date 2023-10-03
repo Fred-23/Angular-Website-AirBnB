@@ -25,4 +25,8 @@
         </div>
     </div>
   
-  
+
+    <div *ngFor="let city of listCity$ | async">
+        <p>{{ city.nom }}</p>
+      </div>
+      

@@ -1,4 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { City } from '../models/City';
+import { Observable } from 'rxjs';
+import { AccommodationService } from 'src/app/service/accommodation.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +10,9 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
+  listCity$: Observable<Array<City>>;
+
+  constructor(private accommodationService: AccommodationService) { }
 
   ngAfterViewInit() {
     // Récupérez l'élément input par son id
@@ -14,13 +20,23 @@ export class HeaderComponent implements AfterViewInit {
 
     // Vérifiez si l'élément existe avant d'ajouter l'écouteur d'événements
     if (searchInput) {
+      searchInput.addEventListener("input", (event) => {
+        // Mettre à jour this.searchText à chaque changement d'entrée
+        this.searchText = (event.target as HTMLInputElement).value;
+      });
+
       searchInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
           // Lorsque la touche "Entrée" est pressée, changez la couleur de fond
           searchInput.style.backgroundColor = "yellow"; // Changez la couleur comme souhaité
+          this.listCity$ = this.accommodationService.getCitiesByName(this.searchText);
+          console.log(this.searchText)
         }
       });
     }
   }
 
+  ngOnInit(): void {
+    
+  }
 }
