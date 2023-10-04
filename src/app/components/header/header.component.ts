@@ -12,6 +12,7 @@ import { SharedVariableService } from 'src/app/service/shared-variable.service';
 export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
   listCity$: Observable<Array<City>>;
+  listCitySuggestions: City[] = []; // Tableau pour stocker les suggestions de recherche
 
   constructor(private accommodationService: AccommodationService,private searchService: SharedVariableService ) { }
   ngAfterViewInit() {
@@ -24,6 +25,8 @@ export class HeaderComponent implements AfterViewInit {
         // Mettre à jour this.searchText à chaque changement d'entrée
         this.searchText = (event.target as HTMLInputElement).value;
         this.searchService.setSearchText(this.searchText);
+        this.listCity$ = this.accommodationService.getCitiesByName(this.searchText);
+
       });
 
       searchInput.addEventListener("keydown", (event) => {

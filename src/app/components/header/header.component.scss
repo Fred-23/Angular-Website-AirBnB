@@ -1,19 +1,16 @@
 .filter-red {
   filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
     brightness(116%) contrast(104%);
-    
 }
 
-
 .header-line {
-  
   background-color: aqua;
-  align-items: center;  //à enlever plus tard 
+  align-items: center; //à enlever plus tard
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 4rem;
-  border-bottom: 2px solid #555; 
+  border-bottom: 2px solid #555;
   height: 8vh;
   padding-left: 1%;
   .searchbar {
@@ -30,7 +27,9 @@
     padding-right: 5%;
     align-items: center;
     .bubble {
-      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;      display: flex;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      display: flex;
       padding-left: 2%;
       padding-right: 28%;
       gap: 1rem;
@@ -39,11 +38,9 @@
       //background-color: transparent; /* Couleur de fond transparente */
       border: 2px solid #555; /* Bordure de 2 pixels en gris foncé */
       border-radius: 10px; /* Rayon de 10 pixels pour arrondir les coins */
-   
     }
   }
 }
-
 
 .text-right-container {
   white-space: nowrap; /* Cette propriété est nécessaire pour que text-overflow fonctionne */
