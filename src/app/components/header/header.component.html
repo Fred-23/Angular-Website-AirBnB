@@ -30,7 +30,15 @@
       alt="icon"
       class="filter-red"
     />
-    <div class="bubble">
+
+    <!-- <ng-container *ngIf="navItems$ | async as navItems">
+      <div
+        (mouseleave)="showSub = false"
+        (mouseenter)="itemHover(item)"
+        *ngFor="let item of navItems"
+        class="nav-item"
+      > -->
+    <div class="bubble" (mouseenter)="showMenu = true" (mouseleave)="showMenu = false" >
       <img
         src="../../assets/assets-airbnb/bars.svg"
         alt="icon"
@@ -41,6 +49,15 @@
         alt="icon"
         class="filter-red"
       />
-    </div>
+      
   </div>
+  <div class="menu" *ngIf="showMenu">
+    <!-- Contenu du menu -->
+    <!-- Vous pouvez ajouter des liens ou des options de menu ici -->
+    <ul>
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2</a></li>
+      <li><a href="#">Option 3</a></li>
+    </ul>
+</div>
 </div>

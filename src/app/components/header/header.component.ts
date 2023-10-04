@@ -12,6 +12,8 @@ import { SharedVariableService } from 'src/app/service/shared-variable.service';
 export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
   listCity$: Observable<Array<City>>;
+  showMenu:boolean= false;
+
 
   constructor(private accommodationService: AccommodationService,private searchService: SharedVariableService ) { }
   ngAfterViewInit() {
@@ -38,6 +40,8 @@ export class HeaderComponent implements AfterViewInit {
       });
     }
   }
+
+
 
   ngOnInit(): void {
     
