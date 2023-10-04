@@ -1,5 +1,4 @@
 
-/* You can add global styles to this file, and also import other style files */
 *{
     margin: 0;
     padding: 0;
@@ -21,4 +20,10 @@
 
 p{
     font-family: 'cereal_airbnb_light';
+}
+
+
+//Pour changer le curseur, lors qu'il y'a des éléments à cliquer
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+  cursor: pointer;
 }

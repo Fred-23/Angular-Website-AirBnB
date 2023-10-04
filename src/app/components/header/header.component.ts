@@ -12,7 +12,6 @@ import { SharedVariableService } from 'src/app/service/shared-variable.service';
 export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
   listCity$: Observable<Array<City>>;
-  listCitySuggestions: City[] = []; // Tableau pour stocker les suggestions de recherche
 
   constructor(private accommodationService: AccommodationService,private searchService: SharedVariableService ) { }
   ngAfterViewInit() {
