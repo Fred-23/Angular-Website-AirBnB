@@ -28,3 +28,11 @@ p{
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
   cursor: pointer;
 }
+
+@media (prefers-color-scheme: dark) {
+  /* Définissez ici vos styles pour le mode sombre */
+  .html {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+}
