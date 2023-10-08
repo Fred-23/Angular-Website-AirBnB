@@ -9,8 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
 import { CookiePopUpComponent } from './components/cookie-pop-up/cookie-pop-up.component';
-import { CommonModule } from '@angular/common'; // Importez CommonModule
-
+import { CommonModule } from '@angular/common';
+import { MapsComponent } from './components/maps/maps.component'; // Importez CommonModule
+import { LeafletModule } from '@asymmetrik/ngx-leaflet'; // Importez LeafletModule
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { CommonModule } from '@angular/common'; // Importez CommonModule
     CardComponent,
     ScrollbarComponent,
     CookiePopUpComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    LeafletModule
     
   ],
   providers: [],
