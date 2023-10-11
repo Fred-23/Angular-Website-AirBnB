@@ -2,13 +2,30 @@
   filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
     brightness(116%) contrast(104%);
 }
+.loupe-container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 90, 95);
+  border-radius: 50%;
+}
+
+.loupe-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: invert(100%);
+  width: 15px;
+  height: 15px;
+}
 
 .header-line {
   align-items: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #555;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.501);
   height: 8vh;
 
   .logo {
@@ -24,12 +41,13 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 15vh;
     height: 50%;
+    white-space: nowrap;
     /*END*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
-    width: 33%;
+    width: 45%;
   }
   .right-container {
     .text-right-container {
@@ -48,9 +66,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
-      border: 2px solid #555; /* Bordure de 2 pixels en gris foncé */
-      border-radius: 10px; /* Rayon de 10 pixels pour arrondir les coins */
+      gap: 0.5rem;
+      border: 2px solid #555; 
+      border-radius: 30px;
+      width: 4vw;
       padding: 3px;
       img {
         cursor: pointer;
@@ -65,7 +84,8 @@
         border: 2px solid #555;
         border-radius: 10px;
         position: absolute;
-        transform: translateY(80%);
+        transform: translateY(72%) translateX(-20%);
+        white-space: nowrap;
       }
     }
   }

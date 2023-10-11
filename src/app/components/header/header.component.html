@@ -1,6 +1,10 @@
 <div class="header-line">
   <a class="logo" href="http://localhost:4200">
-    <img src="../../../assets/assets-airbnb/logo.svg" alt="" class="filter-red">
+    <img
+      src="../../../assets/assets-airbnb/logo.svg"
+      alt=""
+      class="filter-red"
+    />
   </a>
   <div class="searchbar">
     <input
@@ -9,6 +13,7 @@
       id="search-input"
       list="city-suggestions"
     />
+    <p>|</p>
     <datalist id="city-suggestions">
       <option
         *ngFor="let city of listCity$ | async"
@@ -17,12 +22,15 @@
     </datalist>
 
     <p>Une semaine</p>
+    <p>|</p>
     <p>Ajouter des voyageurs</p>
-    <img
-      src="../../assets/assets-airbnb/loupe.svg"
-      alt="icon"
-      class="filter-red"
-    />
+    <div class="loupe-container">
+      <img
+        src="../../assets/assets-airbnb/loupe.svg"
+        alt="icon"
+        class="loupe-image"
+      />
+    </div>
   </div>
   <div class="right-container">
     <div class="text-right-container">
@@ -34,11 +42,8 @@
       alt="icon"
       class="filter-red"
     />
-    
-    <div
-      class="bubble"
-      (click)="toggleMenu()"
-    >
+
+    <div class="bubble" (click)="toggleMenu()">
       <img
         src="../../assets/assets-airbnb/bars.svg"
         alt="icon"
@@ -51,9 +56,10 @@
       />
       <div class="menu" *ngIf="showMenu">
         <ul>
-          <p><a href="#">Option 1</a></p>
-          <p><a href="#">Option 2</a></p>
-          <p><a href="#">Option 3</a></p>
+          <p><a href="#">Inscription</a></p>
+          <p><a href="#">Connexion</a></p>
+          <p><a href="#">Mettre mon logement</a></p>
+          <p><a href="#">Centre d'aide</a></p>
         </ul>
       </div>
     </div>
