@@ -34,8 +34,6 @@ export class HeaderComponent implements AfterViewInit {
 
       searchInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-          // Lorsque la touche "Entrée" est pressée, changez la couleur de fond
-          searchInput.style.backgroundColor = "yellow"; // Changez la couleur comme souhaité
           this.listCity$ = this.accommodationService.getCitiesByName(this.searchText);
           console.log(this.searchText)
         }

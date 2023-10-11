@@ -7,7 +7,6 @@
   filter: grayscale(100%);
 }
 
-
 .Img {
   width: 30vh;
   height: 25vh;
@@ -47,11 +46,18 @@
 }
 
 .like {
-  filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg) brightness(116%) contrast(104%);
+  filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
+    brightness(116%) contrast(104%);
 }
 
 .favorite-like {
+  filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(100%) contrast(100%);
+  fill: #ff0000;
+}
 
-  filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  fill: #FF0000;
+
+.card{
+  margin-left: 2vh;
+  margin-bottom: 2vh;
 }
