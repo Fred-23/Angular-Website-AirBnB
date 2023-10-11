@@ -10,6 +10,8 @@ export class MapsComponent implements OnInit {
 
   private map: L.Map;
   private franceCenter: L.LatLngExpression = [46.603354, 1.888334]; // Coordonnées du centre de la France
+  private nantesCoords: L.LatLngExpression = [47.218372, -1.553621]; // Coordonnées de Nantes
+  private parisCoords: L.LatLngExpression = [48.8566, 2.3522]; // Coordonnées de Paris
 
   private initMap(): void {
     this.map = L.map('map', {
@@ -24,6 +26,11 @@ export class MapsComponent implements OnInit {
     });
 
     tiles.addTo(this.map);
+    const nantesMarker = L.marker(this.nantesCoords).addTo(this.map);
+   nantesMarker.bindPopup('Nantes').openPopup();
+
+    const parisMarker = L.marker(this.parisCoords).addTo(this.map);
+    parisMarker.bindPopup('Paris').openPopup();
   }
 
   constructor() { }

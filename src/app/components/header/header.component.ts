@@ -13,7 +13,9 @@ export class HeaderComponent implements AfterViewInit {
   searchText: string = ''; // Propriété pour stocker le texte de l'input
   listCity$: Observable<Array<City>>;
   showMenu:boolean= false;
-
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 
   constructor(private accommodationService: AccommodationService,private searchService: SharedVariableService ) { }
   ngAfterViewInit() {

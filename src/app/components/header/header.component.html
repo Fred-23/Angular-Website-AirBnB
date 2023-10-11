@@ -1,17 +1,21 @@
 <div class="header-line">
-  <a href="http://localhost:4200">
-    <img
-      src="../../assets/assets-airbnb/logo.svg"
-      alt="icon"
-      class="filter-red"
-    />
+  <a class="logo" href="http://localhost:4200">
+    <img src="../../../assets/assets-airbnb/logo.svg" alt="" class="filter-red">
   </a>
   <div class="searchbar">
-    <input type="text" placeholder="N'importe où" id="search-input" list="city-suggestions" />
+    <input
+      type="text"
+      placeholder="N'importe où"
+      id="search-input"
+      list="city-suggestions"
+    />
     <datalist id="city-suggestions">
-      <option *ngFor="let city of listCity$ | async" [value]="city.nom"></option>
+      <option
+        *ngFor="let city of listCity$ | async"
+        [value]="city.nom"
+      ></option>
     </datalist>
-        
+
     <p>Une semaine</p>
     <p>Ajouter des voyageurs</p>
     <img
@@ -30,17 +34,11 @@
       alt="icon"
       class="filter-red"
     />
-
-    <!-- <ng-container *ngIf="navItems$ | async as navItems">
-      <div
-        (mouseleave)="showSub = false"
-        (mouseenter)="itemHover(item)"
-        *ngFor="let item of navItems"
-        class="nav-item"
-      > -->
-
     
-    <div class="bubble" (mouseenter)="showMenu = true" (mouseleave)="showMenu = false" >
+    <div
+      class="bubble"
+      (click)="toggleMenu()"
+    >
       <img
         src="../../assets/assets-airbnb/bars.svg"
         alt="icon"
@@ -52,14 +50,12 @@
         class="filter-red"
       />
       <div class="menu" *ngIf="showMenu">
-        <!-- Contenu du menu -->
-        <!-- Vous pouvez ajouter des liens ou des options de menu ici -->
         <ul>
           <p><a href="#">Option 1</a></p>
           <p><a href="#">Option 2</a></p>
           <p><a href="#">Option 3</a></p>
         </ul>
+      </div>
     </div>
   </div>
-  
 </div>

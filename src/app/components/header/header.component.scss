@@ -4,58 +4,69 @@
 }
 
 .header-line {
-  //background-color: aqua;
-  align-items: center; //à enlever plus tard
+  align-items: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
   border-bottom: 2px solid #555;
   height: 8vh;
-  padding-left: 1%;
-  .searchbar {
-    padding-left: 8%;
-    //background-color: red;
+
+  .logo {
+    padding-left: 1rem;
+    width: 33%;
+    height: 100%;
     display: flex;
-    white-space: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .searchbar {
+    /*Affichage style AirBnB*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15vh;
+    height: 50%;
+    /*END*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 2rem;
+    width: 33%;
   }
   .right-container {
-    //background-color: green;
+    .text-right-container {
+      white-space: nowrap;
+    }
+    padding-right: 1rem;
+    width: 33%;
     display: flex;
-    gap: 1rem;
-    padding-right: 5%;
     align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
     height: 100%;
     .bubble {
-      position: relative;
       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
         rgba(0, 0, 0, 0.23) 0px 6px 6px;
       display: flex;
-      padding-left: 2%;
-      padding-right: 28%;
+      justify-content: center;
+      align-items: center;
       gap: 1rem;
-      //width: 200%;
-      //height: 100%;
-      //background-color: transparent; /* Couleur de fond transparente */
       border: 2px solid #555; /* Bordure de 2 pixels en gris foncé */
       border-radius: 10px; /* Rayon de 10 pixels pour arrondir les coins */
+      padding: 3px;
+      img {
+        cursor: pointer;
+        width: 40%;
+        height: 90%;
+      }
+
+      .menu {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        background-color: white;
+        border: 2px solid #555;
+        border-radius: 10px;
+        position: absolute;
+        transform: translateY(80%);
+      }
     }
   }
 }
-
-.text-right-container {
-  white-space: nowrap; /* Cette propriété est nécessaire pour que text-overflow fonctionne */
-}
-
-.menu {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-  rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  //background-color: white;
-  border: 2px solid #555;
-  border-radius: 10px;
-  position: absolute;
-  top: 130%; /* Position en bas de la .bubble */
-  left: 10%; /* ou right: 0; pour ajuster la position horizontalement */
-}
-
