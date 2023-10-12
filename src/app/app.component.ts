@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'airbnb-fred';
+  isAppActive = true;
+
+  toggleApp() {
+    this.isAppActive = !this.isAppActive;
+  }
 }

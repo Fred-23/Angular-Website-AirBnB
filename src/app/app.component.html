@@ -1,7 +1,8 @@
 <div class="scroll-container">
   <app-header></app-header>
   <app-scrollbar></app-scrollbar>
-  <app-home></app-home>
-  <app-cookie-pop-up></app-cookie-pop-up>
-  <!-- <app-maps></app-maps> -->
+  <app-home *ngIf="isAppActive"></app-home>
+  <app-cookie-pop-up *ngIf="isAppActive"></app-cookie-pop-up>
+  <app-maps *ngIf="isAppActive == false"></app-maps>
+  <app-bubble-maps (click)="toggleApp()"></app-bubble-maps>
 </div>

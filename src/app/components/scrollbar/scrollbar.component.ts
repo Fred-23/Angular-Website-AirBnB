@@ -46,11 +46,11 @@ export class ScrollbarComponent {
 
   scrollLeft() {
     console.log("Left")
-    this.scrollContainer.nativeElement.scrollLeft -= 100; // Vous pouvez ajuster la valeur de défilement selon vos besoins
+    this.scrollContainer.nativeElement.scrollLeft -= 800; // Vous pouvez ajuster la valeur de défilement selon vos besoins
   }
 
   scrollRight() {
     console.log("Right")
-    this.scrollContainer.nativeElement.scrollLeft += 100; // Vous pouvez ajuster la valeur de défilement selon vos besoins
+    this.scrollContainer.nativeElement.scrollLeft += 800; // Vous pouvez ajuster la valeur de défilement selon vos besoins
   }
 }
