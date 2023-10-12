@@ -11,7 +11,8 @@ import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
 import { CookiePopUpComponent } from './components/cookie-pop-up/cookie-pop-up.component';
 import { CommonModule } from '@angular/common';
 import { MapsComponent } from './components/maps/maps.component'; // Importez CommonModule
-import { LeafletModule } from '@asymmetrik/ngx-leaflet'; // Importez LeafletModule
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { BubbleMapsComponent } from './components/bubble-maps/bubble-maps.component'; // Importez LeafletModule
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet'; // Importez LeafletModu
     ScrollbarComponent,
     CookiePopUpComponent,
     MapsComponent,
+    BubbleMapsComponent,
   ],
   imports: [
     BrowserModule,
