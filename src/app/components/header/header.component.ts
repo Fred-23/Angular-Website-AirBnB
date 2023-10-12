@@ -29,13 +29,12 @@ export class HeaderComponent implements AfterViewInit {
         this.searchText = (event.target as HTMLInputElement).value;
         this.searchService.setSearchText(this.searchText);
         this.listCity$ = this.accommodationService.getCitiesByName(this.searchText);
-
       });
 
       searchInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
           this.listCity$ = this.accommodationService.getCitiesByName(this.searchText);
-          console.log(this.searchText)
+    
         }
       });
     }

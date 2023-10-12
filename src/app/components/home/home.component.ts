@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
     return `data:image/jpeg;base64,${base64Image}`;
   }
 
-  // Méthode pour vérifier si l'hébergement correspond au searchText
   // Méthode pour vérifier si le nom de l'hébergement ou le code postal commence par searchText
   matchesSearchText(accommodationName: string, zipCode: number): boolean {
     if (!this.searchText) {
