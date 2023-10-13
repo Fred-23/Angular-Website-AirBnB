@@ -1,1 +1,9 @@
-<p>main-page works!</p>
+<div class="scroll-container">
+    <app-header></app-header>
+    <app-scrollbar></app-scrollbar>
+    <app-home *ngIf="isAppActive"></app-home>
+    <app-cookie-pop-up *ngIf="isAppActive"></app-cookie-pop-up>
+    <app-maps *ngIf="isAppActive == false"></app-maps>
+    <app-bubble-maps (click)="toggleApp()"></app-bubble-maps>
+  </div>
+  

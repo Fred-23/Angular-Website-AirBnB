@@ -15,7 +15,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { BubbleMapsComponent } from './components/bubble-maps/bubble-maps.component';
 import { DetailledpageComponent } from './components/detailledpage/detailledpage.component';
 import { RouterModule } from '@angular/router';
-import { MainPageComponent } from './components/main-page/main-page.component'; 
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { DetailledCardComponent } from './components/detailled-card/detailled-card.component'; 
 
 
 
@@ -31,6 +32,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     BubbleMapsComponent,
     DetailledpageComponent,
     MainPageComponent,
+    DetailledCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,11 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     HttpClientModule,
     CommonModule,
     LeafletModule,
-    RouterModule.forRoot([ // Configurez vos routes ici
-    // Par exemple :
-    { path: 'detailed/:id', component: DetailledpageComponent },]),
+    RouterModule.forRoot([ //Pour configurez vos routes
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'main', component: MainPageComponent  },
+  { path: 'detailledpage', component: DetailledpageComponent },
+]),
     
   ],
   providers: [],

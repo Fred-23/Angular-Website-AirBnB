@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
+  isAppActive = true;
 
+  toggleApp() {
+    this.isAppActive = !this.isAppActive;
+  }
 }

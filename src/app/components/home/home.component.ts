@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   redirectToDetailedPage(accommodationId: number): void {
     // Utilisez le routeur pour naviguer vers la page détaillée avec l'ID de l'hébergement
-    this.router.navigate(['/detailed', accommodationId]);
+    this.router.navigate(['/detailledpage'], {queryParams: {accommodationId}});
     console.log(accommodationId)
   }
 

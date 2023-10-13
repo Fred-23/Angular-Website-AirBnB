@@ -100,7 +100,7 @@ export class MapsComponent implements OnInit {
                       const stars = '⭐'.repeat(accommodation.rating); // Ajoutez le nombre d'étoiles
                       const priceText = `💰 €${accommodation.price}`; // Ajoutez le prix
 
-                      const popupText = `${cityName} ${cityCount}<br>${stars}<br>${accommodation.rating}<br>${priceText}`;
+                      const popupText = `${cityName} ${cityCount}<br>${stars}<br>${accommodation.rating}<br>${priceText}<br><a href="http://localhost:4200/detailledpage?accommodationId=${accommodation.id}">Cliquez ici pour plus de détails</a>`;
                       const cityMarker = L.marker(
                         [lat + latOffset, lon + lonOffset],
                         {

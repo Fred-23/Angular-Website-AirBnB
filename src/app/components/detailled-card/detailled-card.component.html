@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="text-large">
+    <div class="underline">
+
+    
+    <p>
+      Logement n°{{ accommodation.id }} à {{ accommodation.city.name }},
+      {{ accommodation.city.zipCode }}
+    </p>
+</div>
+    <div class="horizontal-container">
+      <div class="firstline">
+        <div class="rating">
+          <img
+            src="../../../assets/assets-airbnb/star.svg"
+            alt="Image du logement"
+            class="star"
+          />
+
+          <p>{{ accommodation.rating }}</p>
+        </div>
+        <p>
+          <span class="price">{{ accommodation.price }}€</span> par nuit
+        </p>
+      </div>
+
+
+      <div class="share-and-save">
+        <img src="../../../assets/assets-airbnb/share.svg"/>
+        <p>Partager</p>
+        <img src="../../../assets/assets-airbnb/like.svg"/>
+        <p>Enregistrer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="squareimage">
+    <img
+      [src]="'data:image/png;base64,' + accommodation.image"
+      alt="Image du logement"
+      class="Img"
+    />
+
+    <div class="description">
+      <div class="title-description">Description</div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac
+        lectus in urna tincidunt dictum. Nulla eget facilisis eros. Sed
+        fermentum, lorem nec iaculis elementum, purus risus dapibus ex, sit amet
+        fermentum sapien quam id tortor.
+      </p>
+    </div>
+  </div>
+</div>

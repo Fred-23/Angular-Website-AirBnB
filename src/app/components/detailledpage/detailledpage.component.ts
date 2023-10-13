@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AccommodationService } from 'src/app/service/accommodation.service';
+import { Logement } from 'src/app/components/models/Logement';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detailledpage',
@@ -9,7 +11,8 @@ import { AccommodationService } from 'src/app/service/accommodation.service';
 })
 
 export class DetailledpageComponent implements OnInit {
-  accommodation: any; // Déclarez le type d'hébergement approprié
+  accommodation$: Observable<Array<Logement>>;
+  accommodationId: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,13 +20,13 @@ export class DetailledpageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      const accommodationId = +params['id']; // Récupérez l'ID de l'hébergement depuis l'URL
+    this.route.queryParams.subscribe((params) => {
+      this.accommodationId = +params['accommodationId']; // Récupérez l'ID de l'hébergement depuis l'URL
+      console.log('Variable reçue :', this.accommodationId);
 
-      // Utilisez le service pour obtenir les détails de l'hébergement par ID
-      this.accommodationService.getAccomodations().subscribe((data) => {
-        this.accommodation = data;
-      });
+      // Maintenant, filtrez les hébergements en fonction de l'ID
+      this.accommodation$ = this.accommodationService.getAccomodations()
+        .pipe(map(accommodations => accommodations.filter(acc => acc.id === this.accommodationId)));
     });
   }
 }
