@@ -1,0 +1,15 @@
+<router-outlet></router-outlet>
+    
+<p>detailledpage works!</p>
+<div class="detailled-page">
+    <h2>Détails de l'hébergement</h2>
+    <div *ngIf="accommodation">
+      <h3>{{ accommodation.city.name }}</h3>
+      <p>Code postal : {{ accommodation.city.zipCode }}</p>
+      <!-- Autres détails de l'hébergement à afficher -->
+    </div>
+    <div *ngIf="!accommodation">
+      <p>Aucun hébergement trouvé.</p>
+    </div>
+  </div>
+  

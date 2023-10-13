@@ -10,9 +10,14 @@ import { CardComponent } from './components/card/card.component';
 import { ScrollbarComponent } from './components/scrollbar/scrollbar.component';
 import { CookiePopUpComponent } from './components/cookie-pop-up/cookie-pop-up.component';
 import { CommonModule } from '@angular/common';
-import { MapsComponent } from './components/maps/maps.component'; // Importez CommonModule
+import { MapsComponent } from './components/maps/maps.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { BubbleMapsComponent } from './components/bubble-maps/bubble-maps.component'; // Importez LeafletModule
+import { BubbleMapsComponent } from './components/bubble-maps/bubble-maps.component';
+import { DetailledpageComponent } from './components/detailledpage/detailledpage.component';
+import { RouterModule } from '@angular/router';
+import { MainPageComponent } from './components/main-page/main-page.component'; 
+
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { BubbleMapsComponent } from './components/bubble-maps/bubble-maps.compon
     CookiePopUpComponent,
     MapsComponent,
     BubbleMapsComponent,
+    DetailledpageComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    LeafletModule
+    LeafletModule,
+    RouterModule.forRoot([ // Configurez vos routes ici
+    // Par exemple :
+    { path: 'detailed/:id', component: DetailledpageComponent },]),
     
   ],
   providers: [],

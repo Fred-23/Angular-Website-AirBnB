@@ -6,6 +6,7 @@ import { City } from '../models/City';
 import { SharedVariableService } from 'src/app/service/shared-variable.service';
 import { Coordinate } from '../models/Coordinate';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,8 +21,15 @@ export class HomeComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private accommodationService: AccommodationService,
-    private searchService: SharedVariableService
+    private searchService: SharedVariableService,
+    private router:Router
   ) {}
+
+  redirectToDetailedPage(accommodationId: number): void {
+    // Utilisez le routeur pour naviguer vers la page détaillée avec l'ID de l'hébergement
+    this.router.navigate(['/detailed', accommodationId]);
+    console.log(accommodationId)
+  }
 
   ngOnInit(): void {
     this.searchService.searchText$.subscribe((searchText) => {

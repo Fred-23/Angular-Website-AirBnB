@@ -1,32 +1,38 @@
-
-
-  <div *ngIf="accommodation$ | async as accommodations" class="cardlist-container">
-    <div class="cardlist">
-      <div *ngFor="let accommodation of accommodations" class="card-wrapper">
-        <!-- Ajoutez une condition ngIf pour filtrer les cards -->
-        <app-card [accommodation]="accommodation" 
-                  *ngIf="matchesSearchText(accommodation.city.name, accommodation.city.zipCode)">
+<div
+  *ngIf="accommodation$ | async as accommodations"
+  class="cardlist-container"
+>
+  <div class="cardlist">
+    <div *ngFor="let accommodation of accommodations" class="card-wrapper">
+        <app-card
+          [accommodation]="accommodation"
+          *ngIf="
+            matchesSearchText(
+              accommodation.city.name,
+              accommodation.city.zipCode
+            )
+          " (click)="redirectToDetailedPage(accommodation.id)"
+        >
         </app-card>
 
-        <ng-container *ngIf="coordinatesItems$ | async as coordinatesItems">
-          <div *ngFor="let item of coordinatesItems" class="city-item">
-            <!-- Vérifiez si le nom de la ville correspond -->
-            <ng-container *ngIf="item.name === accommodation.city.name">
-              <!-- <p>{{ item.name }}</p> -->
-              <div *ngFor="let coordinate of item.Coordinates" class="sub-item">
-                <!-- <p>Latitude: {{ coordinate.lat }}</p> -->
-                <!-- <p>Longitude: {{ coordinate.lon }}</p> -->
-              </div>
-            </ng-container>
-          </div>
-        </ng-container>
-      </div>
+      <ng-container *ngIf="coordinatesItems$ | async as coordinatesItems">
+        <div *ngFor="let item of coordinatesItems" class="city-item">
+          <!-- Vérifiez si le nom de la ville correspond -->
+          <ng-container *ngIf="item.name === accommodation.city.name">
+            <!-- <p>{{ item.name }}</p> -->
+            <div *ngFor="let coordinate of item.Coordinates" class="sub-item">
+              <!-- <p>Latitude: {{ coordinate.lat }}</p> -->
+              <!-- <p>Longitude: {{ coordinate.lon }}</p> -->
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
     </div>
   </div>
+</div>
 
-
-<div *ngIf="!(accommodation$ | async ) as accommodations" class="loader">
+<div *ngIf="!(accommodation$ | async) as accommodations" class="loader">
   <div class="load">
-    <img src="../../assets/assets-airbnb/load.gif" alt="Chargement en cours">
+    <img src="../../assets/assets-airbnb/load.gif" alt="Chargement en cours" />
   </div>
 </div>
