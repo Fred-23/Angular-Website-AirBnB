@@ -1,11 +1,14 @@
 # Page d'accueil liste
-<img width="1790" alt="Screenshot 2023-10-13 at 12 25 26-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/4e64d908-6a1c-42d9-8c6d-3b9c370e12f8">
+<img width="1790" alt="Screenshot 2023-10-13 at 12 25 26-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/928bb939-8c38-4448-af2e-d0f9382ceb4f">
+
 
 # Page d'accueil maps
-<img width="1793" alt="Screenshot 2023-10-13 at 12 26 21-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/807fd77b-1ca5-474f-b7da-b89e12a7a189">
+
+<img width="1793" alt="Screenshot 2023-10-13 at 12 26 21-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/aaf7a7ed-03a5-472f-95c8-84decca7f24a">
 
 # Page des logements
-<img width="1787" alt="Screenshot 2023-10-13 at 12 26 28-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/a6983aa4-6acf-47f4-a684-855cb1e022f0">
+
+<img width="1787" alt="Screenshot 2023-10-13 at 12 26 28-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/d6fa3491-2e6b-489d-913d-6f8f05505704">
 
 ## Librairies:
 npm install express sqlite3
