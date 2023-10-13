@@ -8,7 +8,4 @@ import { Logement } from '../models/Logement';
 })
 export class DetailledCardComponent {
   @Input() accommodation: Logement;
-  toggleFavorite() {
-    this.accommodation.favourite = !this.accommodation.favourite;
-  }
 }

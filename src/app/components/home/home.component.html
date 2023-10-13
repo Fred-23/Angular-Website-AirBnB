@@ -3,30 +3,30 @@
   class="cardlist-container"
 >
   <div class="cardlist">
+    <!-- On vérifie que la card correspond à l'input et aussi on ajoute la fonctionnalité de pour générer une deuxième page web -->
     <div *ngFor="let accommodation of accommodations" class="card-wrapper">
-        <app-card
-          [accommodation]="accommodation"
-          *ngIf="
-            matchesSearchText(
-              accommodation.city.name,
-              accommodation.city.zipCode
-            )
-          " (click)="redirectToDetailedPage(accommodation.id)"
-        >
-        </app-card>
+      <app-card
+        [accommodation]="accommodation"
+        *ngIf="
+          matchesSearchText(accommodation.city.name, accommodation.city.zipCode)
+        "
+        (click)="redirectToDetailedPage(accommodation.id)"
+      >
+      </app-card>
 
-      <ng-container *ngIf="coordinatesItems$ | async as coordinatesItems">
+      <!-- Ce code est optionnel il permet d'afficher les coordonnées géographiques de chaque ville/ -->
+      <!-- <ng-container *ngIf="coordinatesItems$ | async as coordinatesItems">
         <div *ngFor="let item of coordinatesItems" class="city-item">
-          <!-- Vérifiez si le nom de la ville correspond -->
+           On Vérifie si le nom de la ville correspond 
           <ng-container *ngIf="item.name === accommodation.city.name">
-            <!-- <p>{{ item.name }}</p> -->
+            <p>{{ item.name }}</p>
             <div *ngFor="let coordinate of item.Coordinates" class="sub-item">
-              <!-- <p>Latitude: {{ coordinate.lat }}</p> -->
-              <!-- <p>Longitude: {{ coordinate.lon }}</p> -->
+               <p>Latitude: {{ coordinate.lat }}</p> 
+               <p>Longitude: {{ coordinate.lon }}</p> 
             </div>
           </ng-container>
         </div>
-      </ng-container>
+      </ng-container> -->
     </div>
   </div>
 </div>

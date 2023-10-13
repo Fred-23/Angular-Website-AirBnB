@@ -1,95 +1,92 @@
 .filter-red {
-    filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
-      brightness(116%) contrast(104%);
-  }
-  
-  .filter-gray {
-    filter: grayscale(100%);
-  }
-  .text-large{
-    font-size: xx-large;
-    font-weight: bold;
-    .underline{
-        text-decoration: underline;
+  filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
+    brightness(116%) contrast(104%);
+}
 
-    }
+.filter-gray {
+  filter: grayscale(100%);
+}
+.text-large {
+  font-size: xx-large;
+  font-weight: bold;
+  .underline {
+    text-decoration: underline;
   }
-  .Img {
-    width: 90vh;
-    height: 75vh;
-    border-radius: 10px;
-  }
-  .horizontal-container{
-    display: flex;
-    
-    .share-and-save{
-        align-items: center;
-        position: absolute;
-        right:0;
-        padding-right: 5%;
-        display: flex;
-        gap:1rem;
-    }
-  }
-  .firstline {
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    display: flex;
-    gap: 5px;
-    font-weight: bold;
-  }
-  
-  .squareimage {
-    position: relative;
-    display: flex;
-    .like {
-      width: 2vh;
-      height: 2vh;
-      position: absolute;
-      margin-left: 27vh;
-      margin-top: 1vh;
-    }
-  }
-  
-  .rating {
-    display: flex;
+}
+.Img {
+  width: 90vh;
+  height: 75vh;
+  border-radius: 10px;
+}
+.horizontal-container {
+  display: flex;
+
+  .share-and-save {
     align-items: center;
-    gap: 0.2rem;
-    .star {
-      width: 30px;
-      height: 30px;
-    }
+    position: absolute;
+    right: 0;
+    padding-right: 5%;
+    display: flex;
+    gap: 1rem;
   }
-  
-  .price {
-    padding-left: 10vh;
-    font-weight: bolder;
-  }
-  
+}
+.firstline {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.squareimage {
+  position: relative;
+  display: flex;
   .like {
-    filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
-      brightness(116%) contrast(104%);
+    width: 2vh;
+    height: 2vh;
+    position: absolute;
+    margin-left: 27vh;
+    margin-top: 1vh;
   }
-  
-  .favorite-like {
-    filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(0deg)
-      brightness(100%) contrast(100%);
-    fill: #ff0000;
-  }
-  
-  
-  .card{
-    margin-left: 2vh;
-    margin-top: 2vh;
-  }
-  .description{
-    padding-left: 5%;
-    margin-right: 5%;
-    font-size: xx-large;
-    flex: wrap;
+}
 
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  .star {
+    width: 30px;
+    height: 30px;
   }
+}
 
-  .title-description{
-    font-size: 10vh;
-  }
+.price {
+  padding-left: 10vh;
+  font-weight: bolder;
+}
+
+.like {
+  filter: invert(42%) sepia(32%) saturate(2363%) hue-rotate(323deg)
+    brightness(116%) contrast(104%);
+}
+
+.favorite-like {
+  filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(100%) contrast(100%);
+  fill: #ff0000;
+}
+
+.card {
+  margin-left: 2vh;
+  margin-top: 2vh;
+}
+.description {
+  padding-left: 5%;
+  margin-right: 5%;
+  font-size: xx-large;
+  flex: wrap;
+}
+
+.title-description {
+  font-size: 10vh;
+}

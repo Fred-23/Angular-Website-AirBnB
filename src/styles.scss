@@ -6,6 +6,9 @@
     //font-family: 'cereal_airbnb';
 }
 
+
+//Importation de la font de airbnb
+
 //Asterix pour tous les éléments, appliquer un même style partout
 @font-face {
     font-family: 'cereal_airbnb_light';
@@ -24,11 +27,12 @@ p{
 }
 
 
-//Pour changer le curseur, lors qu'il y'a des éléments à cliquer
+//Pour changer le curseur, lorsqu'il y'a des éléments à cliquer
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
   cursor: pointer;
 }
 
+//En cours d'implémentation
 @media (prefers-color-scheme: dark) {
   /* Définissez ici vos styles pour le mode sombre */
   .html {

@@ -1,2 +1,2 @@
 npm install express sqlite3
-npm install leaflet @asymmetrik/ngx-leaflet
+npm install leaflet @asymmetrik/ngx-leaflet 

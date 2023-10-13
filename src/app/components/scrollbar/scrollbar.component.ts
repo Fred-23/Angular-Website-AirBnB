@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
+
+//Ce composant permet d'afficher une scrollbar, avec des icônes 
 @Component({
   selector: 'app-scrollbar',
   templateUrl: './scrollbar.component.html',
@@ -46,11 +48,11 @@ export class ScrollbarComponent {
 
   scrollLeft() {
     console.log("Left")
-    this.scrollContainer.nativeElement.scrollLeft -= 800; // Vous pouvez ajuster la valeur de défilement selon vos besoins
+    this.scrollContainer.nativeElement.scrollLeft -= 800;
   }
 
   scrollRight() {
     console.log("Right")
-    this.scrollContainer.nativeElement.scrollLeft += 800; // Vous pouvez ajuster la valeur de défilement selon vos besoins
+    this.scrollContainer.nativeElement.scrollLeft += 800;
   }
 }

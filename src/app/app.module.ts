@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +17,8 @@ import { RouterModule } from '@angular/router';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { DetailledCardComponent } from './components/detailled-card/detailled-card.component'; 
 
+
+//Dans ce fichier on ajoute tous les librairies qu'on utilise dans notre page web
 
 
 @NgModule({

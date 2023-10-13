@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+//Composant permet de gérer la gestion du boutont pour switcher entre l'affichage de la carte et de la liste
 @Component({
   selector: 'app-bubble-maps',
   templateUrl: './bubble-maps.component.html',

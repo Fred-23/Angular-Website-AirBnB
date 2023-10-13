@@ -1,18 +1,33 @@
 <div class="card">
-    <div class="squareimage">
-        <img [src]="'data:image/png;base64,' + accommodation.image" alt="Image du logement" class="Img"/>
-        <img src="../../../assets/assets-airbnb/like.svg" alt="Image du logement" class="like" [ngClass]="{'favorite-like': !accommodation.favourite}" />
-    </div>
+  <div class="squareimage">
+    <img
+      [src]="'data:image/png;base64,' + accommodation.image"
+      alt="Image du logement"
+      class="Img"
+    />
+    <img
+      src="../../../assets/assets-airbnb/like.svg"
+      alt="Image du logement"
+      class="like"
+      [ngClass]="{ 'favorite-like': !accommodation.favourite }"
+    />
+  </div>
 
-    <div class="firstline">
-        <p>{{ accommodation.city.name }},</p>
-        <p>{{ accommodation.city.zipCode }}</p>
-        <div class="rating">
-            <img src="../../../assets/assets-airbnb/star.svg" alt="Image du logement" class="star" />
-            <p>{{ accommodation.rating }}</p>
-        </div>
+  <div class="firstline">
+    <p>{{ accommodation.city.name }},</p>
+    <p>{{ accommodation.city.zipCode }}</p>
+    <div class="rating">
+      <img
+        src="../../../assets/assets-airbnb/star.svg"
+        alt="Image du logement"
+        class="star"
+      />
+      <p>{{ accommodation.rating }}</p>
     </div>
+  </div>
 
-    <p><span class="price">{{ accommodation.price }}€</span> par nuit</p>
-    <p>Favori: {{ accommodation.favourite ? 'Oui' : 'Non' }}</p>
+  <p>
+    <span class="price">{{ accommodation.price }}€</span> par nuit
+  </p>
+  <p>Favori: {{ accommodation.favourite ? "Oui" : "Non" }}</p>
 </div>

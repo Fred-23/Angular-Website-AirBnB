@@ -8,6 +8,15 @@ import { SharedVariableService } from 'src/app/service/shared-variable.service';
 import { AccommodationService } from 'src/app/service/accommodation.service';
 import { Logement } from 'src/app/components/models/Logement';
 
+//Description (Api d'OpenStreetMap)
+//Ce composant permet d'afficher la carte et d'afficher les marqueurs en fonction de la liste de la carte
+//De plus la recherche sémantique, est implémenté cela nous permet de filtrer  les marqueurs en fonction de la recherche dans la searchbar.
+//J'ai aussi rajouté le lien vers la deuxième page à la fois dans l'overlay des marqueurs et aussi dans le clique des cards
+
+//Pour les coordonnées géograpgiques, j'ai simuler en mettant ses informations dans un base de données locales.
+//Puis je les récupère en fonction du nom de la ville.
+//Si plusieurs villes ont le même nom alors je les décale avec un offset.
+
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
@@ -20,7 +29,7 @@ export class MapsComponent implements OnInit {
   searchText: string = '';
 
   private map: L.Map;
-  private customIcon: Icon;
+  private customIcon: Icon; //Custom Icône de la maison
   private cityMarkers: L.Marker[] = []; // Liste des marqueurs actuellement affichés
 
   constructor(
@@ -37,8 +46,10 @@ export class MapsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Récupération de l'input du text
     this.searchService.searchText$.subscribe((searchText) => {
       this.searchText = searchText;
+      //Ajout des Marqueurs issues de la database
       this.addDatabaseMarkers();
     });
     this.initMap();
@@ -120,6 +131,9 @@ export class MapsComponent implements OnInit {
       });
   }
 
+
+
+  //Fonction pour comparer l'input et les noms de la database
   matchesSearchText(accommodationName: string): boolean {
     if (!this.searchText) {
       return true;

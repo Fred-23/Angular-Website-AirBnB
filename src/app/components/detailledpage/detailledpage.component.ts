@@ -9,7 +9,7 @@ import { map, Observable } from 'rxjs';
   templateUrl: './detailledpage.component.html',
   styleUrls: ['./detailledpage.component.scss'],
 })
-
+//Il s'agit de la page détaillée pour un logement
 export class DetailledpageComponent implements OnInit {
   accommodation$: Observable<Array<Logement>>;
   accommodationId: number;
@@ -24,7 +24,7 @@ export class DetailledpageComponent implements OnInit {
       this.accommodationId = +params['accommodationId']; // Récupérez l'ID de l'hébergement depuis l'URL
       console.log('Variable reçue :', this.accommodationId);
 
-      // Maintenant, filtrez les hébergements en fonction de l'ID
+      // Cette fonction permet de filtrez les hébergements en fonction de l'ID
       this.accommodation$ = this.accommodationService.getAccomodations()
         .pipe(map(accommodations => accommodations.filter(acc => acc.id === this.accommodationId)));
     });

@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cookie-pop-up.component.html',
   styleUrls: ['./cookie-pop-up.component.scss']
 })
+
+//Ce composant gère les cookies et si l'utilisateur ne les pas accepter, la pop-up apparaît
 export class CookiePopUpComponent implements OnInit {
 
   constructor() { }

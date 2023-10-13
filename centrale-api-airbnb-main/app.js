@@ -7,6 +7,8 @@ const db = new sqlite3.Database('accommodations.db');
 
 app.use(cors());
 
+
+//Ce fichier permet de rendre accessible notre base de données en la mettant sur un serveur.
 app.get("/accommodations", (req, res) => {
   db.all(
     "SELECT id, image, city_zipCode, city_name, price, rating, favourite FROM accommodations",

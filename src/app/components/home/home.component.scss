@@ -1,24 +1,16 @@
 body {
-    overflow-x: hidden; /* Désactive le défilement horizontal */
-  }
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
 
-.cardlist{
+.cardlist {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-
-// .card-wrapper{
-//   width: 300px; /* Largeur fixe pour chaque carte */
-//   justify-content: center;
-//   display: flex;
-// }
-
-.load{
-  display: flex; 
+.load {
+  display: flex;
   justify-content: center;
-  align-items: center; 
-
+  align-items: center;
 }

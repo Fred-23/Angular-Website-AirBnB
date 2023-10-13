@@ -14,6 +14,7 @@
       list="city-suggestions"
     />
     <p>|</p>
+    <!-- J'utilise une datalist à partir de chaque changement de touche pour afficher la liste récupérer de l'api du gouvernement -->
     <datalist id="city-suggestions">
       <option
         *ngFor="let city of listCity$ | async"
