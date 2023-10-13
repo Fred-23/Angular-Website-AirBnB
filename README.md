@@ -1,8 +1,16 @@
 # Page d'accueil liste
+<img width="1790" alt="Screenshot 2023-10-13 at 12 25 26-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/4e64d908-6a1c-42d9-8c6d-3b9c370e12f8">
 
 # Page d'accueil maps
+<img width="1793" alt="Screenshot 2023-10-13 at 12 26 21-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/807fd77b-1ca5-474f-b7da-b89e12a7a189">
 
 # Page des logements
+<img width="1787" alt="Screenshot 2023-10-13 at 12 26 28-min" src="https://github.com/Fred-23/Angular-Website-AirBnB/assets/101244166/a6983aa4-6acf-47f4-a684-855cb1e022f0">
+
+## Librairies:
+npm install express sqlite3
+
+npm install leaflet @asymmetrik/ngx-leaflet 
 
 
 
